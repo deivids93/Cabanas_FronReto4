@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MI DESCANSO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+  </head>
+  <body >
+    <div>
+      <script type="text/javascript">
+        window.onload=listaCategorias();
+        window.onload=listaCabins();
+        window.onload=listaClient();
+        window.onload = function () {
+        var fecha = new Date(); //Fecha actual
+        var mes = fecha.getMonth() + 1; //obteniendo mes
+        var dia = fecha.getDate(); //obteniendo dia
+        var ano = fecha.getFullYear(); //obteniendo año
+        if (dia < 10) dia = "0" + dia; //agrega cero si el menor de 10
+        if (mes < 10) mes = "0" + mes; //agrega cero si el menor de 10
+        document.getElementById("startDate").value = ano + "-" + mes + "-" + dia;
+      };
+        </script>
+      <h1 align="center">RETO 4</h1>
+
+      <div>
+        <h2 align="center">CATEGORIA</h2>
+  
+        <table border="1" align="center">       
+          <tr>
+            <td colspan="2">
+              <label>Digite  Categoria </label>
+            </td>
+          </tr>
+       
+          <tr>
+            <td><label>Name</label></td>
+            <td><input type="text"  disabled=true  id="name_cat" maxlength="45" placeholder="name" width="50%" style="width : 500px;"></td>
+          </tr>
+  
+          <tr>
+            <td><label>Description</label></td>
+            <td> <textarea id="description_cat"  disabled=true  maxlength="250" style="width : 500px;" ></textarea> </td>
+          </tr>
+  
+          <tr align="center">
+            <td  colspan="2">
+            <button id="BtnnuevCateg" onclick="nuevacategoria()">Nueva Categoria</button>
+            <button id="BtnConsultCateg" onclick="traerInformacionCategory()">Consultar Categoria</button>
+            <button id="BtnGuardarCateg"  disabled=true onclick="validarGuardarInformacionCategory()">Guardar Categoria</button>
+            <button  onclick="salir()" >Salir</button> 
+          </td>
+
+          </tr>
+        </table>
+      </div>
+      <div></div>
+  
+      <div id="resultadoCategoria"></div>
+
+      <h2 align="center">CABAÑAS</h2>
+     
+
+      <table border="1" align="center" >
+        <tr>
+          <td colspan="2">
+            <label>Ingrese los datos del registro de los Cabaña </label>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Name</label></td>
+          <td>
+            <input disabled=true type="text" id="name_cab" placeholder="name" maxlength="45" width="50%" style="width : 500px;" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><label>Brands</label></td>
+          <td><input disabled=true type="text" id="brands" placeholder="Brands"  maxlength="45" width="50%" style="width : 500px;" /></td>
+        </tr>
+
+        <tr>
+          <td><label>Rooms</label></td>
+          <td><input disabled=true type="number" id="rooms" placeholder="Rooms" width="50%" style="width : 500px;"/></td>
+        </tr>
+        <tr>
+          <td><label>Descripcion</label></td>
+          <td> <textarea disabled=true id="description_cab"   maxlength="250" style="width : 500px;" ></textarea> </td>
+        
+        </tr>
+        <tr>
+          <td><label>Category</label></td>
+          <td><select disabled=true id="selectCateg" style="width : 500px;" ></select></td>
+        </tr>             
+        <tr align="center">
+          <td colspan="2">
+            <button id="BtnnuevCaban" onclick="nuevacabaña()">Nueva Cabaña</button>   
+            <button id="BtnConsuCab" onclick="traerInformacionCabin()"id="traerInformacioncab">Consultar Cabaña</button>
+            <button id="BtnGuardCab" disabled=true  onclick="guardarInformacionCabin()" id="guardarCabana">Guardar Cabaña</button>
+            <button  onclick="Salir()" >Salir</button> 
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div></div>
+
+    <div id="resultadocabana"></div>
+
+
+
+    
+   
+
+    <div>
+      <h2 align="center">CLIENTES</h2>
+
+      <table border="1" align="center">
+        <tr>
+          <td colspan="2">
+            <label>Ingrese los datos del registro de los Clientes </label>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Name</label></td>
+          <td><input disabled=true type="text" id="name_client"  maxlength="250"  placeholder="Name" style="width : 500px;" /></td>
+        </tr>
+
+        <tr>
+          <td><label>Email</label></td>
+          <td><input disabled=true type="text" id="email"  maxlength="45"  placeholder="Email"  style="width : 500px;"/></td>
+        </tr>
+        <tr>
+          <td><label>Password</label></td>
+          <td><input disabled=true type="text" id="Password" placeholder="Password" style="width : 500px;"/></td>
+        </tr>
+
+        <tr>
+          <td><label>Age</label></td>
+          <td><input disabled=true type="number" id="age" placeholder="Age" style="width : 500px;" /></td>
+        </tr>
+        <tr align="center">
+          <td colspan="2">
+          <button id="BtnnuevClient" onclick="nuevocliente()">Nuevo Cliente</button>           
+          <button id="BtnCosulClient" onclick="traerInformacionClient()">Consultar Clientes</button>
+          <button id="BtnGuardClient" disabled=true  onclick="guardarInformacionClient()">Guardar Clientes</button>
+          <button  onclick="Salir()" >Salir</button> 
+        </td>
+        </tr>
+      </table>
+    </div>
+    <div></div>
+
+    <div id="resultadoClient"></div>
+
+
+    <div>
+        <h2 align="center">MENSAJES</h2>
+  
+        <table border="1" align="center">
+          <tr>
+            <td colspan="2">
+              <label>Digite su  Mensaje  </label>
+            </td>
+          </tr>
+         
+          <tr>
+            <td><label>Mensaje</label></td>
+            <td><textarea disabled=true id="Message"   maxlength="250" style="width : 500px;" ></textarea> </td>
+             
+          </tr>
+          <tr>
+            <td><label>Cabin</label></td>
+            <td><select disabled=true id="selectCabin" style="width : 500px;" ></select></td>
+          </tr>
+          <tr>
+            <td><label>Client</label></td>
+            <td><select disabled=true id="selectClient" style="width : 500px;" ></select></td>
+          </tr>
+  
+          <tr align="center"> 
+            <td colspan="2">
+              <button id="BtnnuevMessag" onclick="nuevoMessag()">Nuevo Mensaje</button>           
+              <button id="BtnCosulMessag" onclick="traerInformacionMessage()">Consultar Mensaje</button> 
+              <button id="BtnGuardMessag" disabled=true onclick="guardarInformacionMessage()" >Guardar Mensaje</button>
+              <button  onclick="Salir()" >Salir</button> 
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div></div>
+  
+      <div id="resultadoMesage"></div>
+
+      <div>
+        <h2 align="center">RESERVACION</h2>
+  
+        <table border="1" align="center">
+          <tr>
+            <td colspan="2">
+              <label>Digite su  Reserva  </label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Fecha Inicio</label></td>
+            <td>
+              <input disabled=true type="date" id="startDate" placeholder="startDate" style="width : 300px;"/>
+            </td>
+          </tr>
+  
+          <tr>
+            <td><label>Fecha Final</label></td>
+            <td><input disabled=true type="date" id="devolutionDate" placeholder="devolutionDate" style="width : 300px;"> </td>
+          </tr>
+          <tr>
+            <td><label>Cliente</label></td>
+            <td><select disabled=true id="selectClient1" style="width : 300px;" ></select></td>
+          </tr>
+          <tr>
+            <td><label>Cabin</label></td>
+            <td><select disabled=true id="selectCabin1" style="width : 300px;" ></select></td>
+          </tr>
+        </tr>
+               
+          <tr align="center">
+            <td colspan="2">
+              <button id="BtnnuevReserva" onclick="nuevoReserva()">Nuevo Mensaje</button>           
+              <button id="BtnConsulReserva" onclick="traerInformacionReservation()">Consultar Reserva</button> 
+              <button id="BtnGuardReserva" disabled=true onclick="guardarInformacionReservation()" >Guardar Reserva</button>
+              <button  onclick="Salir()" >Salir</button> 
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div></div>
+      <div id="resultadoReserv"></div>
+
+      
+      <div>
+        <h2 align="center"> ADMINISTRACION</h2>
+  
+        <table border="1" align="center">
+          <tr>
+            <td colspan="2">
+              <label>Digite Administrador  </label>
+            </td>
+          </tr>
+         
+          <tr>
+            <td><label>Nombre</label></td>
+            <td><input  disabled=true type="text" id="name_adm"  maxlength="250"  placeholder="Name" style="width : 500px;" /></td>
+          </tr>
+  
+          <tr>
+            <td><label>Correo</label></td>
+            <td><input disabled=true type="text" id="emailAdm"  maxlength="45"  placeholder="Email"  style="width : 500px;"/></td>
+          </tr>
+          <tr>
+            <td><label>Password</label></td>
+            <td><input disabled=true type="text" id="PasswordAdm" placeholder="Password" style="width : 500px;"/></td>
+          </tr>
+  
+  
+          <tr align="center">
+            <td colspan="2">
+              <button id="BtnnuevAdmin" onclick="nuevoAdmin()" >Nuevo Administrador</button> 
+              <button id="BtnConsulAdmin" onclick="traerInformacionAdmin()">Consultar Administrador</button>
+              <button id="BtnGuardAdmin" disabled=true onclick="guardarInformacionAdmin()" >Guardar Administrador</button>
+              <button  onclick="Salir()" >Salir</button> 
+          </td>
+          </tr>
+        </table>
+      </div>
+      <div></div>
+
+
+  
+      <div id="resultadoAdmin"></div>
+
+  </body>
+</html>
