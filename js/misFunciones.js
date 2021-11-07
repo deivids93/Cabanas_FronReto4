@@ -6,7 +6,7 @@ function traerInformacionCategory() {
   $("#BtnnuevCateg").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53:8080/api/Category/all",
+    url: "http://144.22.58.165:8080/api/Category/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -97,7 +97,7 @@ function guardarInformacionCategory() {
     dataType: "JSON",
     data: JSON.stringify(var2),
 
-    url: "http://localhost:8080/api/Category/save",
+    url: "http://144.22.58.165:8080/api/Category/save",
 
     success: function (response) {
       console.log(response);
@@ -122,7 +122,7 @@ function actualizarInformacionCategory(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Category/update",
+    url: "http://144.22.58.165:8080/api/Category/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -144,7 +144,7 @@ function borrarCategory(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Category/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Category/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
@@ -182,7 +182,7 @@ function traerInformacionCabin() {
   $("#BtnnuevCaban").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53/api/Cabin/all",
+    url: "http://144.22.58.165:8080/api/Cabin/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -304,7 +304,7 @@ function guardarInformacionCabin1() {
     dataType: "JSON",
     data: JSON.stringify(var3),
 
-    url: "http://129.151.115.53/api/Cabin/save",
+    url: "http://144.22.58.165:8080/api/Cabin/save",
 
     success: function (response) {
       console.log(response);
@@ -326,7 +326,7 @@ function actualizarInformacionCabins(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Cabin/update",
+    url: "http://144.22.58.165:8080/api/Cabin/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -350,7 +350,7 @@ function borrarCabins(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Cabin/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Cabin/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
@@ -366,7 +366,7 @@ function borrarCabins(idElemento) {
 
 function listaCategorias() {
   $.ajax({
-    url: "http://129.151.115.53/api/Category/all",
+    url: "http://144.22.58.165:8080/api/Category/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -403,7 +403,7 @@ function traerInformacionClient() {
   $("#BtnnuevClient").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53/api/Client/all",
+    url: "http://144.22.58.165:8080/api/Client/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -506,7 +506,7 @@ function guardarInformacionClient1() {
     dataType: "JSON",
     data: JSON.stringify(var4),
 
-    url: "http://129.151.115.53/api/Client/save",
+    url: "http://144.22.58.165:8080/api/Client/save",
 
     success: function (response) {
       console.log(response);
@@ -533,7 +533,7 @@ function actualizarInformacionClient(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Client/update",
+    url: "http://144.22.58.165:8080/api/Client/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -557,7 +557,7 @@ function borrarClient(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Client/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Client/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
@@ -583,7 +583,7 @@ function nuevoMessag() {
 
 function listaCabins() {
   $.ajax({
-    url: "http://129.151.115.53/api/Cabin/all",
+    url: "http://144.22.58.165:8080/api/Cabin/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -605,7 +605,7 @@ function listaCabins() {
 
 function listaClient() {
   $.ajax({
-    url: "http://129.151.115.53/api/Client/all",
+    url: "http://144.22.58.165:8080/api/Client/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -634,7 +634,7 @@ function traerInformacionMessage() {
   $("#BtnnuevMessag").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53/api/Message/all",
+    url: "http://144.22.58.165:8080/api/Message/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -720,7 +720,7 @@ function guardarInformacionMessage1() {
     dataType: "JSON",
     data: JSON.stringify(var5),
 
-    url: "http://129.151.115.53/api/Message/save",
+    url: "http://144.22.58.165:8080/api/Message/save",
 
     success: function (response) {
       console.log(response);
@@ -744,7 +744,7 @@ function actualizarInformacionMessage(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Message/update",
+    url: "http://144.22.58.165:8080/api/Message/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -765,7 +765,7 @@ function borrarMessage(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Message/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Message/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
@@ -801,7 +801,7 @@ function traerInformacionReservation() {
   $("#BtnnuevReserva").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53/api/Reservation/all",
+    url: "http://144.22.58.165:8080/api/Reservation/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -900,7 +900,7 @@ function guardarInformacionReservation1() {
     dataType: "JSON",
     data: JSON.stringify(var6),
 
-    url: "http://129.151.115.53/api/Reservation/save",
+    url: "http://144.22.58.165:8080/api/Reservation/save",
 
     success: function (response) {
       console.log(response);
@@ -925,7 +925,7 @@ function actualizarInformacionReservacion(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Reservation/update",
+    url: "http://144.22.58.165:8080/api/Reservation/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -947,7 +947,7 @@ function borrarReservacion(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Reservation/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Reservation/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
@@ -985,7 +985,7 @@ function traerInformacionAdmin() {
   $("#BtnnuevAdmin").prop("disabled", true);
 
   $.ajax({
-    url: "http://129.151.115.53/api/Admin/all",
+    url: "http://144.22.58.165:8080/api/Admin/all",
     type: "GET",
     datatype: "JSON",
     success: function (respuesta) {
@@ -1074,7 +1074,7 @@ function guardarInformacionAdmin1() {
     dataType: "JSON",
     data: JSON.stringify(var4),
 
-    url: "http://129.151.115.53/api/Admin/save",
+    url: "http://144.22.58.165:8080/api/Admin/save",
 
     success: function (response) {
       console.log(response);
@@ -1099,7 +1099,7 @@ function actualizarInformacionAdmin(idElemento) {
   console.log(myData);
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Admin/update",
+    url: "http://144.22.58.165:8080/api/Admin/update",
     type: "PUT",
     data: dataToSend,
     contentType: "application/JSON",
@@ -1122,7 +1122,7 @@ function borrarAdmin(idElemento) {
   };
   let dataToSend = JSON.stringify(myData);
   $.ajax({
-    url: "http://129.151.115.53/api/Admin/" + idElemento,
+    url: "http://144.22.58.165:8080/api/Admin/" + idElemento,
     type: "DELETE",
     data: dataToSend,
     contentType: "application/JSON",
